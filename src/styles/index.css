@@ -1,0 +1,156 @@
+/* :root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+} */
+#root{
+  min-height: 100vh;
+}
+
+.App{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #ebedf5;
+}
+
+.dark a:hover {
+  color: #6e76ff;
+}
+
+menu{
+  flex: 1;
+}
+
+input[type=email],input[type=password]{
+  border: 1px solid lightgray;
+  padding: 1rem;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  margin-top: 1rem !important;
+}
+
+input[type=email]:focus,input[type=password]:focus{
+  border-color: rgb(146, 146, 146);
+}
+
+form button{
+  outline: none;
+  background-color: #646cff;
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem !important;
+  font-weight: 500;
+}
+
+main{
+  transition: .3s;
+}
+
+.sidebar{
+  transition: .3s ease-out;
+}
+
+.sidebar menu{
+  transition: .3s ease-in-out;
+  padding: 1rem;
+}
+
+
+
+@media screen and (min-width:769px) {
+  .collapse_sidebar menu{
+    padding: 1rem 0;
+  }
+  .collapse_sidebar{
+    width: 50px !important;
+  }
+  .collapse_sidebar a .item_name{
+    display: none;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .side_active{
+    user-select: none;
+  }
+  .side_active main::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.768);
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .side_active main{
+    z-index: 100;
+  }
+
+  .sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    height: 100vh !important;
+    z-index: 100 !important;
+  }
+
+   .side_active main .sidebar{
+    left:0;
+  }
+
+  .sidebar menu{
+    height: 100%;
+  }
+
+  .top_menu_options .admin_info, .top_menu_options .icon{
+    display: none;
+  }
+
+  .top_menu_options .admin_profile{
+    border: none;
+    box-shadow: none !important;
+    background: none;
+  }
+
+
+}

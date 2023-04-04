@@ -1,0 +1,66 @@
+.title1{
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5rem;
+}
+
+.title2{
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 2rem 0;
+}
+
+.title3{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.text-body{
+    font-size: 16px;
+}
+
+@media (max-width:1024px) {
+    .title1{
+        font-size: 3.5rem;
+        line-height: 4rem;
+        margin-bottom: 10px;
+    }
+    
+    .title2{
+        font-size: 2.5rem;
+        margin: 1rem 0;
+    }
+    
+    .title3{
+        font-size: 1.8rem;
+    }
+
+    .text-body{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:767px) {
+    .title1{
+        font-size: 3rem;
+        line-height: 4rem;
+        margin-bottom: 10px;
+    }
+    
+    .title2{
+        font-size: 2rem;
+        margin: 20px 0;
+    }
+    
+    .title3{
+        font-size: 1.5rem;
+    }
+
+    .text-body{
+        font-size: 14px;
+    }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
